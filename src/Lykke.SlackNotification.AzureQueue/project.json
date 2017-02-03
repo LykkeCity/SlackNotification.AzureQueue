@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Lykke.AzureQueueIntegration": "1.0.6",
+    "Lykke.Common": "1.1.7",
+    "Lykke.RabbitMqBroker": "1.0.21",
+    "Lykke.SlackNotifications": "1.0.9",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.1.0"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.1": {
+      "imports": [ "dnxcore50", "portable-net451+win8" ]
+    }
+  }
+
+}
