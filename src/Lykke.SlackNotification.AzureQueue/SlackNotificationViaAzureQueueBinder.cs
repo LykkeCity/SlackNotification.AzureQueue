@@ -10,8 +10,8 @@ namespace Lykke.SlackNotification.AzureQueue
     public static class SlackNotificationViaAzureQueueBinder
     {
 
-        public static ISlackNotificationsSender UseSlackNotificationsSender(this IServiceCollection serviceCollection, 
-            AzureQueueSettings settings, ILog log)
+        public static ISlackNotificationsSender UseSlackNotificationsSenderViaAzureQueue(this IServiceCollection serviceCollection, 
+            AzureQueueSettings settings, ILog log = null)
         {
             var applicationName =
                 Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationName;
