@@ -16,13 +16,13 @@ namespace Lykke.SlackNotification.AzureQueue
             var applicationName =
                 Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationName;
 
-            var rabbitMqPublisher = 
+            var azureQueuePublisher = 
                 new AzureQueuePublisher<SlackMessageQueueEntity>(applicationName, settings)
                 .SetLogger(log)
                 .SetSerializer(new SlackNotificationsSerializer())
                 .Start();
 
-            var result = new SlackNotificationsSender(rabbitMqPublisher);
+            var result = new SlackNotificationsSender(azureQueuePublisher);
 
             serviceCollection.AddSingleton<ISlackNotificationsSender>(result);
 
