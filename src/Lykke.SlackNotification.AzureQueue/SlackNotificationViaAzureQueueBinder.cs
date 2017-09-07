@@ -4,17 +4,16 @@ using Lykke.AzureQueueIntegration;
 using Lykke.AzureQueueIntegration.Publisher;
 using Lykke.SlackNotifications;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace Lykke.SlackNotification.AzureQueue
 {
     public static class SlackNotificationViaAzureQueueBinder
     {
-
         public static ISlackNotificationsSender UseSlackNotificationsSenderViaAzureQueue(this IServiceCollection serviceCollection, 
             AzureQueueSettings settings, ILog log = null)
         {
-            var applicationName =
-                Microsoft.Extensions.PlatformAbstractions.PlatformServices.Default.Application.ApplicationName;
+            var applicationName = PlatformServices.Default.Application.ApplicationName;
 
             var azureQueuePublisher = 
                 new AzureQueuePublisher<SlackMessageQueueEntity>(applicationName, settings)
@@ -29,7 +28,6 @@ namespace Lykke.SlackNotification.AzureQueue
             return result;
         }
     }
-
 
     public class SlackNotificationsSerializer : IAzureQueueSerializer<SlackMessageQueueEntity>
     {
@@ -61,6 +59,4 @@ namespace Lykke.SlackNotification.AzureQueue
             };
         }
     }
-
-
 }

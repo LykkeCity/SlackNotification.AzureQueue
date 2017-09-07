@@ -1,18 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0F3C275-66BA-4379-A178-C877CF92598E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F06EC27D-9BEC-47BE-99E9-A7FE7C7E532B}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Lykke.SlackNotification.AzureQueue", "src\Lykke.SlackNotification.AzureQueue\Lykke.SlackNotification.AzureQueue.xproj", "{31DB99C1-74EA-4188-93A5-0ADC034A5064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lykke.SlackNotification.AzureQueue", "src\Lykke.SlackNotification.AzureQueue\Lykke.SlackNotification.AzureQueue.csproj", "{31DB99C1-74EA-4188-93A5-0ADC034A5064}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TestInvoke", "src\TestInvoke\TestInvoke.xproj", "{B44AE926-7971-44AA-B8B4-65BA71DB6399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestInvoke", "src\TestInvoke\TestInvoke.csproj", "{B44AE926-7971-44AA-B8B4-65BA71DB6399}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +32,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{31DB99C1-74EA-4188-93A5-0ADC034A5064} = {F0F3C275-66BA-4379-A178-C877CF92598E}
 		{B44AE926-7971-44AA-B8B4-65BA71DB6399} = {F0F3C275-66BA-4379-A178-C877CF92598E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {67B30674-09F5-444E-ABAD-8B06520C76BE}
 	EndGlobalSection
 EndGlobal
