@@ -51,10 +51,17 @@ namespace Lykke.SlackNotification.AzureQueue
     {
         public static SlackMessageQueueContract ToContract(this SlackMessageQueueEntity entity)
         {
+            // 64 Kb - max Azure queue message size
+            // 512 b - reserved for json format, model.Sender and model.Type
+            const int kb = 1024;
+            const int maxLength = 64 * kb - 512;
+            
+            var message = entity.Message.Length > maxLength ? entity.Message.Substring(0, maxLength) : entity.Message;
+
             return new SlackMessageQueueContract
             {
                 Type = entity.Type,
-                Message = entity.Message,
+                Message = message,
                 Sender = entity.Sender
             };
         }
