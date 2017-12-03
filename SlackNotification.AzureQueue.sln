@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0F3C275-66BA-4379-A178-C877CF92598E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F06EC27D-9BEC-47BE-99E9-A7FE7C7E532B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lykke.SlackNotification.AzureQueue", "src\Lykke.SlackNotification.AzureQueue\Lykke.SlackNotification.AzureQueue.csproj", "{31DB99C1-74EA-4188-93A5-0ADC034A5064}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lykke.SlackNotification.AzureQueue", "src\Lykke.SlackNotification.AzureQueue\Lykke.SlackNotification.AzureQueue.csproj", "{FB52EE29-17A4-4BBA-950F-5EDAB321CDC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestInvoke", "src\TestInvoke\TestInvoke.csproj", "{B44AE926-7971-44AA-B8B4-65BA71DB6399}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInvoke", "src\TestInvoke\TestInvoke.csproj", "{431095F4-1FED-48BB-85D0-8EDB43CC7763}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,21 +17,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{31DB99C1-74EA-4188-93A5-0ADC034A5064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31DB99C1-74EA-4188-93A5-0ADC034A5064}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31DB99C1-74EA-4188-93A5-0ADC034A5064}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31DB99C1-74EA-4188-93A5-0ADC034A5064}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B44AE926-7971-44AA-B8B4-65BA71DB6399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B44AE926-7971-44AA-B8B4-65BA71DB6399}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B44AE926-7971-44AA-B8B4-65BA71DB6399}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B44AE926-7971-44AA-B8B4-65BA71DB6399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB52EE29-17A4-4BBA-950F-5EDAB321CDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB52EE29-17A4-4BBA-950F-5EDAB321CDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB52EE29-17A4-4BBA-950F-5EDAB321CDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB52EE29-17A4-4BBA-950F-5EDAB321CDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431095F4-1FED-48BB-85D0-8EDB43CC7763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431095F4-1FED-48BB-85D0-8EDB43CC7763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431095F4-1FED-48BB-85D0-8EDB43CC7763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431095F4-1FED-48BB-85D0-8EDB43CC7763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{31DB99C1-74EA-4188-93A5-0ADC034A5064} = {F0F3C275-66BA-4379-A178-C877CF92598E}
-		{B44AE926-7971-44AA-B8B4-65BA71DB6399} = {F0F3C275-66BA-4379-A178-C877CF92598E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {67B30674-09F5-444E-ABAD-8B06520C76BE}

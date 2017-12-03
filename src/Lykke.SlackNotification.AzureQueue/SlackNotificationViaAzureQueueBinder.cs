@@ -1,5 +1,6 @@
 ﻿using Common;
 using Common.Log;
+using JetBrains.Annotations;
 using Lykke.AzureQueueIntegration;
 using Lykke.AzureQueueIntegration.Publisher;
 using Lykke.SlackNotifications;
@@ -9,6 +10,7 @@ using Autofac;
 
 namespace Lykke.SlackNotification.AzureQueue
 {
+    [PublicAPI]
     public static class SlackNotificationViaAzureQueueBinder
     {
         public static ISlackNotificationsSender UseSlackNotificationsSenderViaAzureQueue(
@@ -24,7 +26,7 @@ namespace Lykke.SlackNotification.AzureQueue
                 .SetSerializer(new SlackNotificationsSerializer())
                 .Start();
 
-            var result = new SlackNotificationsSender(azureQueuePublisher);
+            var result = new SlackNotificationsSender(azureQueuePublisher, ownQueue: true);
 
             serviceCollection.AddSingleton<ISlackNotificationsSender>(result);
 
@@ -74,10 +76,10 @@ namespace Lykke.SlackNotification.AzureQueue
     {
         public static SlackMessageQueueContract ToContract(this SlackMessageQueueEntity entity)
         {
-            // 64 Kb - max Azure queue message size
-            // 512 b - reserved for json format, model.Sender and model.Type
+            // 48 Kb - max base64 encoded Azure queue message size
+            // 1 Kb - reserved for json format, model.Sender, model.Type and message headers
             const int kb = 1024;
-            const int maxLength = 64 * kb - 512;
+            const int maxLength = 48 * kb - 1 * kb;
             
             var message = entity.Message.Length > maxLength ? entity.Message.Substring(0, maxLength) : entity.Message;
 
