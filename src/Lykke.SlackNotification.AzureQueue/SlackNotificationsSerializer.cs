@@ -25,7 +25,7 @@ namespace Lykke.SlackNotification.AzureQueue
                 do
                 {
                     result = model.ToContract(overhead).ToJson();
-                    overhead *= 2;
+                    overhead += 10;
                 }
                 while (result.Length > _maxQueueMessageBase64Size);
             }
