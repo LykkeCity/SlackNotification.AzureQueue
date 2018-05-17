@@ -14,8 +14,8 @@
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
-    <PackageReference Include="Lykke.AzureQueueIntegration" Version="2.0.2" />
-    <PackageReference Include="Lykke.SlackNotifications" Version="1.2.0" />
+    <PackageReference Include="Lykke.AzureQueueIntegration" Version="2.1.0" />
+    <PackageReference Include="Lykke.SlackNotifications" Version="1.3.0" />
   </ItemGroup>
 
 </Project>
