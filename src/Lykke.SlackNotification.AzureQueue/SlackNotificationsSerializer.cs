@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using System;
+using Common;
 using Lykke.AzureQueueIntegration.Publisher;
 using Lykke.SlackNotifications;
 
@@ -18,6 +19,9 @@ namespace Lykke.SlackNotification.AzureQueue
         /// <returns>Serialized string</returns>
         public string Serialize(SlackMessageQueueEntity model)
         {
+            if (model == null)
+                throw new ArgumentNullException();
+
             string result = model.ToContract().ToJson();
             if (result.Length > _maxQueueMessageBase64Size)
             {
