@@ -32,7 +32,7 @@ namespace Lykke.SlackNotification.AzureQueue
             // 1 Kb - reserved for json format, model.Sender, model.Type and message headers
             int maxMessageLength = (_maxMessageBese64SizeInKb - 1) * _kb - overheadSymbolsCount;
 
-            var message = entity.Message.Length > maxMessageLength
+            var message = entity.Message != null && entity.Message.Length > maxMessageLength
                 ? $"{entity.Message.Substring(0, maxMessageLength - 3)}..."
                 : entity.Message;
 
